@@ -83,6 +83,14 @@ __all__ = [
     # Built-in runtimes
     "get_native_runtime_capabilities",
     "get_reduced_harness_capabilities",
+    # Model-aware runtime profiles
+    "RuntimeProfile",
+    "RuntimeProfileProtocol",
+    "RuntimeProfileRegistry",
+    "register_profile",
+    "resolve_profile",
+    "list_profiles",
+    "resolve_model_family",
 ]
 
 # Grouped lazy imports for efficient loading
@@ -154,6 +162,15 @@ _LAZY_GROUPS = {
         'get_rules': ('praisonaiagents.runtime.doctor_registry', 'get_rules'),
         'collect_findings': ('praisonaiagents.runtime.doctor_registry', 'collect_findings'),
         'apply_fixes': ('praisonaiagents.runtime.doctor_registry', 'apply_fixes'),
+    },
+    'profiles': {
+        'RuntimeProfile': ('praisonaiagents.runtime.profiles', 'RuntimeProfile'),
+        'RuntimeProfileProtocol': ('praisonaiagents.runtime.profiles', 'RuntimeProfileProtocol'),
+        'RuntimeProfileRegistry': ('praisonaiagents.runtime.profiles', 'RuntimeProfileRegistry'),
+        'register_profile': ('praisonaiagents.runtime.profiles', 'register_profile'),
+        'resolve_profile': ('praisonaiagents.runtime.profiles', 'resolve_profile'),
+        'list_profiles': ('praisonaiagents.runtime.profiles', 'list_profiles'),
+        'resolve_model_family': ('praisonaiagents.runtime.profiles', 'resolve_model_family'),
     },
 }
 
